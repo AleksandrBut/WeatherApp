@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Weather</string>
+    <string name="tempMinTitle">мин. температура</string>
+    <string name="tempMaxTitle">макс. температура</string>
+    <string name="humidityTitle">влажность</string>
+    <string name="pressureTitle">давление</string>
+    <string name="windSpeedTitle">скорость ветра</string>
+    <string name="cloudinessTitle">облачность</string>
+    <string name="buttonAddCityText">Добавить</string>
+    <string name="newCityNameHint">Введите название города</string>
+</resources>
