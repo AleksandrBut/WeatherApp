@@ -3,7 +3,6 @@ package com.ai.weather.recyclerViewAdapters;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +35,9 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.CityViewHolder
     @Override
     public void onBindViewHolder(@NonNull CityViewHolder cityViewHolder, int i) {
         cityViewHolder.cityName.setText(cities.get(i).getName());
+
+//        TODO 16.06: Implement city.getCountry()
 //        cityViewHolder.cityName.append(", " + cities.get(i).getCountry());
-// TODO 16.06: Implement city.getCountry()
 
         ChangeCityActivity activity = (ChangeCityActivity) cityViewHolder.itemView.getContext();
 

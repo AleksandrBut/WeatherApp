@@ -47,8 +47,6 @@ public class MainActivity extends AppCompatActivity implements HourAdapter.OnHou
         initViewModel();
         initActivity();
 
-//        deleteDatabase("appdb.db");
-
         LinearLayoutManager manager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         recyclerViewDays.setHasFixedSize(true);
         recyclerViewDays.setLayoutManager(manager);

@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.ai.weather.CityForecast;
 import com.ai.weather.R;
 import com.ai.weather.activity.MainActivity;
-import com.ai.weather.CityForecast;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class HourAdapter extends RecyclerView.Adapter<HourAdapter.HourViewHolder
     private int numberOfHours;
     private OnHourClickListener mListener;
     private List<CityForecast.List> currentForecastList;
-    protected int startPosition;
+    private int startPosition;
 
     public HourAdapter(CityForecast cityForecast, int pos, int numberOfHours, OnHourClickListener listener) {
         currentForecastList = cityForecast.getList();
@@ -46,7 +46,6 @@ public class HourAdapter extends RecyclerView.Adapter<HourAdapter.HourViewHolder
 
         hourViewHolder.itemView.setOnClickListener(v -> {
             hourViewHolder.listener.onHourClick(startPosition + i);
-//            hourViewHolder.itemView.setBackgroundColor(ContextCompat.getColor(hourViewHolder.itemView.getContext(), R.color.colorDivider));
         });
 
         hourViewHolder.hour.setText(currentForecast.getDtTxt().substring(11, 16));
@@ -56,7 +55,7 @@ public class HourAdapter extends RecyclerView.Adapter<HourAdapter.HourViewHolder
 
 
         hourViewHolder.icon.setImageURI(Uri.parse("android.resource://com.ai.weather/mipmap/icon"
-                + currentForecast.getWeather().get(0).getIcon()));
+            + currentForecast.getWeather().get(0).getIcon()));
 
         pos += 1;
     }

@@ -6,10 +6,9 @@ import android.arch.lifecycle.MutableLiveData;
 import android.content.Context;
 import android.support.annotation.NonNull;
 
+import com.ai.weather.CityForecast;
 import com.ai.weather.database.AppRepository;
 import com.ai.weather.database.City;
-import com.ai.weather.database.CityInfo;
-import com.ai.weather.CityForecast;
 
 public class MainViewModel extends AndroidViewModel {
 
@@ -20,14 +19,6 @@ public class MainViewModel extends AndroidViewModel {
         super(application);
 
         repository = AppRepository.getInstance(application.getApplicationContext());
-    }
-
-    public void addCity(long cityId, Context context) {
-        repository.getDataFromApi(cityId, cityForecast, context, false);
-    }
-
-    public void makeCityLastChosen(long cityId) {
-        repository.makeCityLastChosen(cityId);
     }
 
     public City getLastChosenCity() {

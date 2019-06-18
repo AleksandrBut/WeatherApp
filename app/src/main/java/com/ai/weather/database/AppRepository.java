@@ -111,33 +111,12 @@ public class AppRepository {
         return database.cityDAO().getLastChosenCity();
     }
 
-//    private boolean isConnectedToInternet() {
-//        try {
-//            int timeout = 1500;
-//            Socket socket = new Socket();
-//            SocketAddress address = new InetSocketAddress("8.8.8.8", 53);
-//            socket.connect(address, timeout);
-//            socket.close();
-//
-//            return true;
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return false;
-//        }
-//    }
-
     public void getCityForecast(long cityId, MutableLiveData<CityForecast> liveData) {
         liveData.postValue(gson.fromJson(database.cityDAO().getCityForecast(cityId), CityForecast.class));
     }
 
     public long getLastModifiedTime(long cityId) {
         return database.cityDAO().getLastModifiedTime(cityId);
-    }
-
-    public void makeCityLastChosen(long cityId) {
-        executor.execute(() -> {
-            database.cityDAO().assignNewLastChosen(cityId);
-        });
     }
 
     public void displayCitiesLike(String q, MutableLiveData<List<CityInfo>> liveData) {

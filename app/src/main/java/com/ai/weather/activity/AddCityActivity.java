@@ -9,12 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.ai.weather.R;
 import com.ai.weather.database.CityInfo;
@@ -48,17 +46,6 @@ public class AddCityActivity extends AppCompatActivity {
 
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
         rvCitiesWithSimilarName.setLayoutManager(layoutManager);
-
-//        findViewById(R.id.addCity).setOnClickListener(v -> {
-//            String cityName = newCityName.getText().toString();
-//
-//            if (!cityName.isEmpty()) {
-//                mViewModel.addCity(cityName.trim(), this);
-//                finish();
-//            } else {
-//                Toast.makeText(this, "Введите имя города", Toast.LENGTH_SHORT).show();
-//            }
-//        });
 
         clearTextButton.setOnClickListener(v -> {
             newCityName.getText().clear();

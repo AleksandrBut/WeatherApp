@@ -46,7 +46,7 @@ public abstract class AppDatabase extends RoomDatabase {
                 outputStream.close();
                 inputStream.close();
 
-                Log.d(" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ", "Database copied successfully");
+                Log.d(" FIRST LAUNCH", "Database copied successfully");
             } catch (IOException e) {
                 e.printStackTrace();
                 Log.d("ERROR", "Can't copy database");

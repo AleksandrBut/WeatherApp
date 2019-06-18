@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ai.weather.R;
 import com.ai.weather.CityForecast;
+import com.ai.weather.R;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -23,7 +23,7 @@ public class DayAdapter extends RecyclerView.Adapter<DayAdapter.DayViewHolder> {
 
     private CityForecast cityForecast;
     private List<String> mUniqueDays;
-    private List<String> mAllDays;
+//    private List<String> mAllDays;
     private HourAdapter.OnHourClickListener listener;
 
     public DayAdapter(CityForecast cityForecast, HourAdapter.OnHourClickListener listener) {
